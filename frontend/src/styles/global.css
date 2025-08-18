@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light theme variables */
+:root,
+[data-theme="light"] {
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-light: #dbeafe;
+  --primary-dark: #1e40af;
+
+  --secondary-color: #6b7280;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+
+  --background: #ffffff;
+  --background-secondary: #f9fafb;
+  --background-tertiary: #f3f4f6;
+
+  --surface: #ffffff;
+  --surface-secondary: #f8fafc;
+  --surface-hover: #f1f5f9;
+
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --text-inverse: #ffffff;
+
+  --border: #e5e7eb;
+  --border-secondary: #d1d5db;
+  --border-focus: #3b82f6;
+
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-lg: rgba(0, 0, 0, 0.15);
+
+  --gradient-from: #eff6ff;
+  --gradient-to: #e0e7ff;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --primary-color: #60a5fa;
+  --primary-hover: #3b82f6;
+  --primary-light: #1e3a8a;
+  --primary-dark: #93c5fd;
+
+  --secondary-color: #9ca3af;
+  --success-color: #34d399;
+  --warning-color: #fbbf24;
+  --error-color: #f87171;
+
+  --background: #111827;
+  --background-secondary: #1f2937;
+  --background-tertiary: #374151;
+
+  --surface: #1f2937;
+  --surface-secondary: #374151;
+  --surface-hover: #4b5563;
+
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --text-inverse: #111827;
+
+  --border: #374151;
+  --border-secondary: #4b5563;
+  --border-focus: #60a5fa;
+
+  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-lg: rgba(0, 0, 0, 0.5);
+
+  --gradient-from: #111827;
+  --gradient-to: #1f2937;
+
+  color-scheme: dark;
+}
+
+html {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+/* Hover utility classes */
+.hover-primary:hover {
+  color: var(--primary-color) !important;
+}
+
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+
+.hover-bg-primary:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+.hover-bg-surface:hover {
+  background-color: var(--surface-hover) !important;
+}
+
+.hover-bg-surface-secondary:hover {
+  background-color: var(--surface-hover) !important;
+}
+
+/* Form input focus styles */
+.input-focus:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 1px var(--primary-color) !important;
+}
+
+.input-focus:focus-visible {
+  outline: none;
+}
+
+/* Button focus styles */
+.btn-focus:focus {
+  box-shadow: 0 0 0 2px var(--primary-color) 30 !important;
+}

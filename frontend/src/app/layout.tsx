@@ -1,8 +1,10 @@
 import { Roboto } from "next/font/google";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import Header from "@/global-components/header";
+import Footer from "@/global-components/footer";
+import { ThemeProvider } from "@/contexts/themeContext";
+import "@/styles/global.css";
 
-const inter = Roboto({ weight: "400", subsets: ["latin"] });
+const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
   title: "Resume Builder",
@@ -16,10 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={roboto.className}>
+        <ThemeProvider>
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
