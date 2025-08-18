@@ -1,0 +1,113 @@
+/* Login Page Styles */
+.container {
+  @apply min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 transition-all duration-200;
+  background-color: var(--background-secondary);
+}
+
+.content {
+  @apply max-w-md w-full space-y-8;
+}
+
+.title {
+  @apply mt-6 text-center text-3xl font-extrabold;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  @apply mt-2 text-center text-sm;
+  color: var(--text-secondary);
+}
+
+.signupLink {
+  @apply font-medium transition-colors;
+  color: var(--primary-color);
+}
+
+.signupLink:hover {
+  opacity: 0.8;
+}
+
+.form {
+  @apply py-8 px-4 shadow sm:rounded-lg sm:px-10 border transition-all duration-200;
+  background-color: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 4px 6px var(--shadow);
+}
+
+.formContent {
+  @apply space-y-6;
+}
+
+.fieldGroup {
+  /* No additional styles needed, using default div */
+}
+
+.label {
+  @apply block text-sm font-medium;
+  color: var(--text-primary);
+}
+
+.inputWrapper {
+  @apply mt-1;
+}
+
+.input {
+  @apply appearance-none block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 transition-all duration-200 sm:text-sm;
+  border-color: var(--border);
+  background-color: var(--surface);
+  color: var(--text-primary);
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+.rememberSection {
+  @apply flex items-center justify-between;
+}
+
+.checkboxGroup {
+  @apply flex items-center;
+}
+
+.checkbox {
+  @apply h-4 w-4 rounded;
+  accent-color: var(--primary-color);
+  border-color: var(--border);
+  background-color: var(--surface);
+}
+
+.checkboxLabel {
+  @apply ml-2 block text-sm;
+  color: var(--text-primary);
+}
+
+.forgotLink {
+  @apply text-sm font-medium transition-colors;
+  color: var(--primary-color);
+}
+
+.forgotLink:hover {
+  opacity: 0.8;
+}
+
+.error {
+  @apply text-sm text-center p-2 rounded-md;
+  color: var(--error-color);
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.submitButton {
+  @apply relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200;
+  background-color: var(--primary-color);
+  color: var(--text-inverse);
+}
+
+.submitButton:hover {
+  background-color: var(--primary-hover);
+}
+
+.submitButton:focus {
+  box-shadow: 0 0 0 2px var(--primary-color);
+}

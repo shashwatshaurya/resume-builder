@@ -2,49 +2,27 @@
 
 import Link from "next/link";
 import useTheme from "@/hooks/useTheme";
+import styles from "./header.module.css";
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header
-      style={{
-        backgroundColor: "var(--surface)",
-        borderBottomColor: "var(--border)",
-        boxShadow: "0 1px 3px var(--shadow)"
-      }}
-      className="border-b transition-all duration-200"
-    >
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-8">
-            <Link
-              href="/"
-              className="text-xl font-bold transition-colors"
-              style={{ color: "var(--primary-color)" }}
-            >
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.leftSection}>
+            <Link href="/" className={styles.logo}>
               Resume Builder
             </Link>
-            <nav className="hidden md:flex space-x-6">
-              <Link
-                href="/"
-                className="transition-colors hover-primary"
-                style={{ color: "var(--text-secondary)" }}
-              >
+            <nav className={styles.nav}>
+              <Link href="/" className={styles.navLink}>
                 Home
               </Link>
-              <Link
-                href="/dashboard"
-                className="transition-colors hover-primary"
-                style={{ color: "var(--text-secondary)" }}
-              >
+              <Link href="/dashboard" className={styles.navLink}>
                 Dashboard
               </Link>
-              <Link
-                href="/login"
-                className="transition-colors hover-primary"
-                style={{ color: "var(--text-secondary)" }}
-              >
+              <Link href="/login" className={styles.navLink}>
                 Login
               </Link>
             </nav>
@@ -52,16 +30,12 @@ const Header = () => {
 
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg transition-all duration-200 hover-bg-surface-secondary"
-            style={{
-              backgroundColor: "var(--surface-secondary)",
-              color: "var(--text-secondary)"
-            }}
+            className={styles.themeButton}
             aria-label="Toggle theme"
           >
             {theme === "light" ? (
               <svg
-                className="w-5 h-5"
+                className={styles.icon}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -75,7 +49,7 @@ const Header = () => {
               </svg>
             ) : (
               <svg
-                className="w-5 h-5"
+                className={styles.icon}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

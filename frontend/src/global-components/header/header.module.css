@@ -1,0 +1,52 @@
+/* Header Component Styles */
+.header {
+  @apply border-b transition-all duration-200;
+  background-color: var(--surface);
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 3px var(--shadow);
+}
+
+.container {
+  @apply mx-auto px-4 py-4;
+  max-width: 1200px;
+}
+
+.content {
+  @apply flex items-center justify-between;
+}
+
+.leftSection {
+  @apply flex items-center space-x-8;
+}
+
+.logo {
+  @apply text-xl font-bold transition-colors;
+  color: var(--primary-color);
+}
+
+.nav {
+  @apply hidden md:flex space-x-6;
+}
+
+.navLink {
+  @apply transition-colors;
+  color: var(--text-secondary);
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}
+
+.themeButton {
+  @apply p-2 rounded-lg transition-all duration-200;
+  background-color: var(--surface-secondary);
+  color: var(--text-secondary);
+}
+
+.themeButton:hover {
+  background-color: var(--surface-hover);
+}
+
+.icon {
+  @apply w-5 h-5;
+}

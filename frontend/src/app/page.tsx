@@ -1,68 +1,34 @@
 "use client";
 
 import Link from "next/link";
+import styles from "./page.module.css";
 
 const Home = () => {
   return (
-    <div
-      className="min-h-screen transition-all duration-200"
-      style={{
-        background: `linear-gradient(to bottom right, var(--gradient-from), var(--gradient-to))`
-      }}
-    >
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1
-            className="text-5xl md:text-6xl font-bold mb-6"
-            style={{ color: "var(--text-primary)" }}
-          >
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <div className={styles.heroSection}>
+          <h1 className={styles.title}>
             Build Your Perfect
-            <span className="block" style={{ color: "var(--primary-color)" }}>
-              Resume
-            </span>
+            <span className={styles.titleAccent}>Resume</span>
           </h1>
-          <p
-            className="text-xl mb-8 max-w-2xl mx-auto"
-            style={{ color: "var(--text-secondary)" }}
-          >
+          <p className={styles.subtitle}>
             Create professional resumes with our easy-to-use builder. Choose
             from beautiful templates and land your dream job.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/dashboard"
-              className="px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover-bg-primary"
-              style={{
-                backgroundColor: "var(--primary-color)",
-                color: "var(--text-inverse)"
-              }}
-            >
+          <div className={styles.buttonGroup}>
+            <Link href="/dashboard" className={styles.primaryButton}>
               Get Started
             </Link>
-            <Link
-              href="/login"
-              className="px-8 py-3 rounded-lg font-semibold border transition-all duration-200 hover-bg-surface"
-              style={{
-                backgroundColor: "var(--surface)",
-                color: "var(--text-primary)",
-                borderColor: "var(--border)"
-              }}
-            >
+            <Link href="/login" className={styles.secondaryButton}>
               Sign In
             </Link>
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            className="p-6 rounded-lg shadow-md border transition-all duration-200"
-            style={{
-              backgroundColor: "var(--surface)",
-              borderColor: "var(--border)",
-              boxShadow: "0 4px 6px var(--shadow)"
-            }}
-          >
-            <div className="mb-4" style={{ color: "var(--primary-color)" }}>
+        <div className={styles.featuresGrid}>
+          <div className={styles.featureCard}>
+            <div className={styles.featureIcon}>
               <svg
                 className="w-8 h-8"
                 fill="none"
@@ -77,27 +43,15 @@ const Home = () => {
                 />
               </svg>
             </div>
-            <h3
-              className="text-xl font-semibold mb-2"
-              style={{ color: "var(--text-primary)" }}
-            >
-              Professional Templates
-            </h3>
-            <p style={{ color: "var(--text-secondary)" }}>
+            <h3 className={styles.featureTitle}>Professional Templates</h3>
+            <p className={styles.featureDescription}>
               Choose from a variety of professionally designed templates that
               make you stand out.
             </p>
           </div>
 
-          <div
-            className="p-6 rounded-lg shadow-md border transition-all duration-200"
-            style={{
-              backgroundColor: "var(--surface)",
-              borderColor: "var(--border)",
-              boxShadow: "0 4px 6px var(--shadow)"
-            }}
-          >
-            <div className="mb-4" style={{ color: "var(--primary-color)" }}>
+          <div className={styles.featureCard}>
+            <div className={styles.featureIcon}>
               <svg
                 className="w-8 h-8"
                 fill="none"
@@ -112,27 +66,15 @@ const Home = () => {
                 />
               </svg>
             </div>
-            <h3
-              className="text-xl font-semibold mb-2"
-              style={{ color: "var(--text-primary)" }}
-            >
-              Lightning Fast
-            </h3>
-            <p style={{ color: "var(--text-secondary)" }}>
+            <h3 className={styles.featureTitle}>Lightning Fast</h3>
+            <p className={styles.featureDescription}>
               Create and customize your resume in minutes with our intuitive
               drag-and-drop interface.
             </p>
           </div>
 
-          <div
-            className="p-6 rounded-lg shadow-md border transition-all duration-200"
-            style={{
-              backgroundColor: "var(--surface)",
-              borderColor: "var(--border)",
-              boxShadow: "0 4px 6px var(--shadow)"
-            }}
-          >
-            <div className="mb-4" style={{ color: "var(--primary-color)" }}>
+          <div className={styles.featureCard}>
+            <div className={styles.featureIcon}>
               <svg
                 className="w-8 h-8"
                 fill="none"
@@ -147,13 +89,8 @@ const Home = () => {
                 />
               </svg>
             </div>
-            <h3
-              className="text-xl font-semibold mb-2"
-              style={{ color: "var(--text-primary)" }}
-            >
-              Secure & Private
-            </h3>
-            <p style={{ color: "var(--text-secondary)" }}>
+            <h3 className={styles.featureTitle}>Secure & Private</h3>
+            <p className={styles.featureDescription}>
               Your data is encrypted and secure. We never share your information
               with third parties.
             </p>

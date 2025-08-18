@@ -1,0 +1,33 @@
+/* Footer Component Styles */
+.footer {
+  @apply border-t transition-all duration-200;
+  background-color: var(--surface-secondary);
+  border-top-color: var(--border);
+}
+
+.container {
+  @apply mx-auto px-4 py-6;
+  max-width: 1200px;
+}
+
+.content {
+  @apply flex flex-col md:flex-row justify-between items-center;
+}
+
+.copyright {
+  @apply text-sm;
+  color: var(--text-tertiary);
+}
+
+.links {
+  @apply flex space-x-6 mt-4 md:mt-0;
+}
+
+.link {
+  @apply text-sm transition-colors;
+  color: var(--text-tertiary);
+}
+
+.link:hover {
+  color: var(--primary-color);
+}

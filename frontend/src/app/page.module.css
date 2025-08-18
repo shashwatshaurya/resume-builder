@@ -1,0 +1,83 @@
+/* Home Page Styles */
+.container {
+  min-height: 100vh;
+  transition: all 0.2s;
+  background: linear-gradient(
+    to bottom right,
+    var(--gradient-from),
+    var(--gradient-to)
+  );
+}
+
+.content {
+  @apply container mx-auto px-4 py-16;
+}
+
+.heroSection {
+  @apply text-center;
+}
+
+.title {
+  @apply text-5xl md:text-6xl font-bold mb-6;
+  color: var(--text-primary);
+}
+
+.titleAccent {
+  @apply block;
+  color: var(--primary-color);
+}
+
+.subtitle {
+  @apply text-xl mb-8 max-w-2xl mx-auto;
+  color: var(--text-secondary);
+}
+
+.buttonGroup {
+  @apply flex flex-col sm:flex-row gap-4 justify-center;
+}
+
+.primaryButton {
+  @apply px-8 py-3 rounded-lg font-semibold transition-all duration-200;
+  background-color: var(--primary-color);
+  color: var(--text-inverse);
+}
+
+.primaryButton:hover {
+  background-color: var(--primary-hover);
+}
+
+.secondaryButton {
+  @apply px-8 py-3 rounded-lg font-semibold border transition-all duration-200;
+  background-color: var(--surface);
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+
+.secondaryButton:hover {
+  background-color: var(--surface-hover);
+}
+
+.featuresGrid {
+  @apply mt-20 grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.featureCard {
+  @apply p-6 rounded-lg shadow-md border transition-all duration-200;
+  background-color: var(--surface);
+  border-color: var(--border);
+  box-shadow: 0 4px 6px var(--shadow);
+}
+
+.featureIcon {
+  @apply mb-4;
+  color: var(--primary-color);
+}
+
+.featureTitle {
+  @apply text-xl font-semibold mb-2;
+  color: var(--text-primary);
+}
+
+.featureDescription {
+  color: var(--text-secondary);
+}

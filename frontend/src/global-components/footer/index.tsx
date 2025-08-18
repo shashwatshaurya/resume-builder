@@ -1,37 +1,21 @@
+import styles from "./footer.module.css";
+
 const Footer = () => {
   return (
-    <footer
-      style={{
-        backgroundColor: "var(--surface-secondary)",
-        borderTopColor: "var(--border)"
-      }}
-      className="border-t transition-all duration-200"
-    >
-      <div className="container mx-auto px-4 py-6">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="text-sm" style={{ color: "var(--text-tertiary)" }}>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.copyright}>
             © 2024 Resume Builder. All rights reserved.
           </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a
-              href="#"
-              className="text-sm transition-colors hover-primary"
-              style={{ color: "var(--text-tertiary)" }}
-            >
+          <div className={styles.links}>
+            <a href="#" className={styles.link}>
               Privacy Policy
             </a>
-            <a
-              href="#"
-              className="text-sm transition-colors hover-primary"
-              style={{ color: "var(--text-tertiary)" }}
-            >
+            <a href="#" className={styles.link}>
               Terms of Service
             </a>
-            <a
-              href="#"
-              className="text-sm transition-colors hover-primary"
-              style={{ color: "var(--text-tertiary)" }}
-            >
+            <a href="#" className={styles.link}>
               Contact
             </a>
           </div>
