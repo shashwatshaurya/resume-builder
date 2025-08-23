@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { DUMMY_RESUMES, RESUME_TEMPLATES } from "./dummyData";
 import { DASHBOARD_TABS } from "./constants";
+import Link from "next/link";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState<DASHBOARD_TABS>(
@@ -25,6 +26,7 @@ const Dashboard = () => {
             <div key={resume.id}>
               <h2>{resume.title}</h2>
               <img src={resume.displayUrl} alt={resume.title} />
+              <Link href={`/resume/${resume.id}`}>Edit</Link>
             </div>
           ))}
         </div>
