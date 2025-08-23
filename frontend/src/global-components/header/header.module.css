@@ -19,6 +19,10 @@
   @apply flex items-center space-x-8;
 }
 
+.rightSection {
+  @apply flex items-center space-x-8;
+}
+
 .logo {
   @apply text-xl font-bold transition-colors;
   color: var(--primary-color);
@@ -49,4 +53,14 @@
 
 .icon {
   @apply w-5 h-5;
+}
+
+.logoutButton {
+  @apply p-2 rounded-lg transition-all duration-200;
+  background-color: var(--surface-secondary);
+  color: var(--text-secondary);
+}
+
+.logoutButton:hover {
+  background-color: var(--surface-hover);
 }

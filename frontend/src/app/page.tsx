@@ -1,9 +1,7 @@
-"use client";
-
-import Link from "next/link";
+// import Link from "next/link";
 import styles from "./page.module.css";
 
-const Home = () => {
+const Home = async () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -16,14 +14,16 @@ const Home = () => {
             Create professional resumes with our easy-to-use builder. Choose
             from beautiful templates and land your dream job.
           </p>
-          <div className={styles.buttonGroup}>
+          {/* <div className={styles.buttonGroup}>
             <Link href="/dashboard" className={styles.primaryButton}>
               Get Started
             </Link>
-            <Link href="/login" className={styles.secondaryButton}>
-              Sign In
-            </Link>
-          </div>
+            {!isAuthenticated && (
+              <Link href="/login" className={styles.secondaryButton}>
+                Sign In
+              </Link>
+            )}
+          </div> */}
         </div>
 
         <div className={styles.featuresGrid}>

@@ -159,3 +159,8 @@ export const DASHBOARD_CONFIG = {
   AUTO_SAVE_ENABLED: true,
   PREVIEW_MODES: ["desktop", "mobile", "print"] as const
 };
+
+export enum DASHBOARD_TABS {
+  MY_RESUMES = "My Resumes",
+  TEMPLATES = "Templates"
+}
