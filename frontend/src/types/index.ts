@@ -7,24 +7,23 @@ export interface PersonalInfo {
   lastName: string;
   email: string;
   phone?: string;
-  address?: string;
   city?: string;
   state?: string;
-  zipCode?: string;
-  linkedIn?: string;
-  website?: string;
+  country?: string;
+  socials?: { platform: string; url: string }[];
+  title: string;
+  summary: string;
 }
 
 export interface Experience {
   id: string;
-  title: string;
+  position: string;
   company: string;
   location?: string;
   startDate: string;
   endDate?: string;
   current: boolean;
-  description?: string;
-  achievements?: string[];
+  description: string[];
 }
 
 export interface Education {
@@ -34,14 +33,12 @@ export interface Education {
   location?: string;
   graduationYear: number;
   gpa?: number;
-  honors?: string;
 }
 
 export interface Skill {
   id: string;
   name: string;
-  category: "technical" | "soft" | "language";
-  proficiency?: "beginner" | "intermediate" | "advanced" | "expert";
+  level?: "beginner" | "intermediate" | "advanced" | "expert";
 }
 
 export interface Project {
@@ -49,60 +46,24 @@ export interface Project {
   title: string;
   description: string;
   technologies?: string[];
-  url?: string;
-  githubUrl?: string;
-  startDate?: string;
-  endDate?: string;
+  link?: string;
 }
 
-export interface Certification {
-  id: string;
-  name: string;
-  issuer: string;
-  dateObtained: string;
-  expirationDate?: string;
-  credentialId?: string;
-  url?: string;
-}
-
-export interface Language {
-  id: string;
-  name: string;
-  proficiency: "basic" | "conversational" | "fluent" | "native";
-}
-
-export interface Achievement {
-  id: string;
-  title: string;
-  description?: string;
-  date?: string;
-  issuer?: string;
-}
-
-export interface Reference {
-  id: string;
-  name: string;
-  title: string;
-  company: string;
-  email?: string;
-  phone?: string;
-  relationship: string;
+export interface RandomTitle {
+  subtitleLeft?: string;
+  subtitleRight?: string;
+  description?: string[];
 }
 
 export interface ResumeSectionData {
   id: string;
-  sectionType: string;
   data:
     | PersonalInfo
     | Experience[]
     | Education[]
     | Skill[]
     | Project[]
-    | Certification[]
-    | Language[]
-    | Achievement[]
-    | Reference[]
-    | string;
+    | RandomTitle[];
   order: number;
 }
 

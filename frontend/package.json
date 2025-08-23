@@ -9,7 +9,7 @@
     "lint": "next lint",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
-    "commit": "git-cz"
+    "cz": "git-cz"
   },
   "dependencies": {
     "next": "^13.4.19",
