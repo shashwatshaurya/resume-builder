@@ -1,11 +1,5 @@
 export const KNOWN_SECTIONS = [
-  "name",
-  "email",
-  "phone",
-  "address",
-  "title",
-  "summary",
-  "socials",
+  "personal-info",
   "education",
   "experience",
   "skills",
