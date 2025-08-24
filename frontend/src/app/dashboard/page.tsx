@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import { DUMMY_RESUMES, RESUME_TEMPLATES } from "./dummyData";
+import ResumeList from "./components/resumeList";
+import TemplateList from "./components/templateList";
 import { DASHBOARD_TABS } from "./constants";
-import Link from "next/link";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState<DASHBOARD_TABS>(
@@ -20,27 +20,8 @@ const Dashboard = () => {
           {DASHBOARD_TABS.TEMPLATES}
         </button>
       </div>
-      {activeTab === DASHBOARD_TABS.MY_RESUMES && (
-        <div>
-          {DUMMY_RESUMES.map((resume) => (
-            <div key={resume.id}>
-              <h2>{resume.title}</h2>
-              <img src={resume.displayUrl} alt={resume.title} />
-              <Link href={`/resume/${resume.id}`}>Edit</Link>
-            </div>
-          ))}
-        </div>
-      )}
-      {activeTab === DASHBOARD_TABS.TEMPLATES && (
-        <div>
-          {RESUME_TEMPLATES.map((template) => (
-            <div key={template.templateId}>
-              <h2>{template.title}</h2>
-              <img src={template.displayUrl} alt={template.title} />
-            </div>
-          ))}
-        </div>
-      )}
+      {activeTab === DASHBOARD_TABS.MY_RESUMES && <ResumeList />}
+      {activeTab === DASHBOARD_TABS.TEMPLATES && <TemplateList />}
     </div>
   );
 };

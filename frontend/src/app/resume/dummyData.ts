@@ -1,6 +1,6 @@
 import { Resume } from "@/types";
 
-const dummyData: Resume = {
+export const dummyData: Resume = {
   id: "1",
   title: "Software Engineer Resume",
   userId: "1",
@@ -142,5 +142,3 @@ const dummyData: Resume = {
   updatedAt: "2021-01-01",
   isPublic: true
 };
-
-export default dummyData;
