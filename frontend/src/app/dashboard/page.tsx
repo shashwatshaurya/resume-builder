@@ -18,13 +18,13 @@ const Dashboard = () => {
             onClick={() => setActiveTab(DASHBOARD_TABS.MY_RESUMES)}
             className={`${styles.tab} ${activeTab === DASHBOARD_TABS.MY_RESUMES ? styles.tabActive : ""}`}
           >
-            📄 My Resumes
+            {DASHBOARD_TABS.MY_RESUMES}
           </button>
           <button
             onClick={() => setActiveTab(DASHBOARD_TABS.TEMPLATES)}
             className={`${styles.tab} ${activeTab === DASHBOARD_TABS.TEMPLATES ? styles.tabActive : ""}`}
           >
-            ✨ Create
+            {DASHBOARD_TABS.TEMPLATES}
           </button>
         </div>
 

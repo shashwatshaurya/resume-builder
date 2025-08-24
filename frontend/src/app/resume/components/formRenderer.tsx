@@ -1,4 +1,4 @@
-import { KNOWN_SECTIONS } from "../constants";
+import { KNOWN_SECTIONS, SECTION_WITH_DESCRIPTION } from "../constants";
 import Section from "./section";
 import InputSection from "./inputSection";
 import { ResumeSectionData } from "@/types";
@@ -9,7 +9,7 @@ const FormRenderer = ({ sections }: { sections: ResumeSectionData[] }) => {
       {sections.map((section) => (
         <div key={section.id}>
           <Section section={section} />
-          {section.id !== KNOWN_SECTIONS.PERSONAL_INFO && <InputSection />}
+          {SECTION_WITH_DESCRIPTION.includes(section.id) && <InputSection />}
         </div>
       ))}
     </div>

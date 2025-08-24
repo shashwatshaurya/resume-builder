@@ -161,6 +161,6 @@ export const DASHBOARD_CONFIG = {
 };
 
 export enum DASHBOARD_TABS {
-  MY_RESUMES = "My Resumes",
-  TEMPLATES = "Templates"
+  MY_RESUMES = "📄 My Resumes",
+  TEMPLATES = "✨ Create"
 }

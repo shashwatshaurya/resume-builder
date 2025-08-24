@@ -1,5 +1,5 @@
 const InputSection = () => {
-  return <div>InputSection</div>;
+  return <div></div>;
 };
 
 export default InputSection;
