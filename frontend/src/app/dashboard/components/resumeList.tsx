@@ -20,48 +20,9 @@ const ResumeList = () => {
 
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: "1.5rem"
-        }}
-      >
-        <h2
-          style={{
-            margin: 0,
-            color: "var(--text-primary)",
-            fontSize: "1.5rem"
-          }}
-        >
-          My Resumes ({DUMMY_RESUMES.length})
-        </h2>
-        <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-          <button
-            style={{
-              padding: "0.5rem",
-              background: "var(--surface-secondary)",
-              border: "1px solid var(--border)",
-              borderRadius: "0.375rem",
-              cursor: "pointer"
-            }}
-          >
-            🔍
-          </button>
-          <button
-            style={{
-              padding: "0.5rem",
-              background: "var(--surface-secondary)",
-              border: "1px solid var(--border)",
-              borderRadius: "0.375rem",
-              cursor: "pointer"
-            }}
-          >
-            📊
-          </button>
-        </div>
-      </div>
+      <h2 className={styles.sectionTitle}>
+        My Resumes ({DUMMY_RESUMES.length})
+      </h2>
 
       <div className={styles.grid}>
         {DUMMY_RESUMES.map((resume) => (
